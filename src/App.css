@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+body {
+  background-image: linear-gradient(to bottom right, #2c184b, #e6b7f3);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+}
+
+.BtnPrincipal{
+  background-color: #F9AD1A!important;
+}
+
+.BtnPrincipal:hover{
+  background-color: #8158c2!important;
+}
