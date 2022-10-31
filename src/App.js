@@ -1,30 +1,36 @@
 import './App.css';
-import * as Mui from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Inicio from './pages/inicio';
+import Error from './pages/error';
+import ListaPlanetas from './pages/listaPlanetas';
+
 
 
 
 function App() {
+
+
+
   return (
     <>
 
-    colocar rotas aqui VER POP CORN MOVIES
 
-      <Mui.Container >
+      <Router>
 
-        <Mui.Grid height='100vh' container direction="column" justifyContent="center" alignItems="center">
-          <Mui.Grid item >
-            <Mui.Typography color='white' variant="h1" fontSize="2rem" fontFamily='Nunito'>Conheça o Sistema Solar! Utilize o 
-            <Mui.Typography variant="h1" fontSize="3rem" fontFamily='Nunito' color='#F9AD1A'>Solar Explorer</Mui.Typography></Mui.Typography>
-          </Mui.Grid>
+        <Routes>
 
-          <Mui.Grid item >
-            <img width="100%"  src="astronauta.png" alt='astronauta' />
-          </Mui.Grid>
+          <Route path="/" element={<Inicio />} />
 
-          <Mui.Button className="BtnPrincipal" variant="contained" size='large'>Vamos lá!</Mui.Button>
+          <Route path="/planetas" element={<ListaPlanetas />} />
 
-        </Mui.Grid>
-      </Mui.Container>
+          <Route path="*" element={<Error/>} />
+
+        </Routes>
+
+      </Router>
+
+
+
 
     </>
   );
