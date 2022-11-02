@@ -2,15 +2,38 @@
 
 body {
   background-image: linear-gradient(to bottom right, #2c184b, #e6b7f3);
+  color: white;
+  margin-bottom: 2rem;
   background-repeat: no-repeat;
   min-height: 100vh;
 
 }
 
-.BtnPrincipal{
-  background-color: #F9AD1A!important;
+
+.girar-planeta{
+  animation: girarPlaneta 30s linear infinite;
+
 }
 
-.BtnPrincipal:hover{
-  background-color: #8158c2!important;
+@keyframes girarPlaneta {
+	0% {
+		transform: rotate(0);
+
+	}
+	100% {
+		transform: rotate(360deg);
+
+	}
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-20px)
+	}
+}
+.efeito-flutuante {
+     animation: float 5s ease-in-out infinite;
 }

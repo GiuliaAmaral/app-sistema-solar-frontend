@@ -16,11 +16,11 @@ export default function Inicio() {
                     </Mui.Grid>
 
                     <Mui.Grid item >
-                        <img width="100%" src="astronauta.png" alt='astronauta' />
+                        <img className='efeito-flutuante' width="100%" src="astronauta.png" alt='astronauta' />
                     </Mui.Grid>
 
-                    <Link to='/planetas'>
-                        <Mui.Button className="BtnPrincipal" component="a" variant="contained" size='large'>Vamos lá!</Mui.Button>
+                    <Link style={{textDecoration:'none'}} to='/planetas'>
+                        <Mui.Button  variant="contained" size='large'>Vamos lá!</Mui.Button>
                     </Link>
 
                 </Mui.Grid>

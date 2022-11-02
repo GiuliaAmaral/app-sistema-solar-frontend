@@ -4,9 +4,23 @@ import Inicio from './pages/inicio';
 import Error from './pages/error';
 import ListaPlanetas from './pages/listaPlanetas';
 import Detalhes from './pages/detalhes';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 
 
+const theme = createTheme({
+  palette: {
+    primary:{
+      main: '#F9AD1A',
+      contrastText: '#fff'
+    },
+    secondary: {
+      main: '#fff',
+      contrastText: '#000'
+    }
+  }
+  
+})
 
 function App() {
 
@@ -15,22 +29,26 @@ function App() {
   return (
     <>
 
+      <ThemeProvider theme={theme}>
 
-      <Router>
 
-        <Routes>
+        <Router>
 
-          <Route path="/" element={<Inicio />} />
+          <Routes>
 
-          <Route path="/planetas" element={<ListaPlanetas />} />
+            <Route path="/" element={<Inicio />} />
 
-          <Route path="/detalhes/:slug" element={<Detalhes />} />
+            <Route path="/planetas" element={<ListaPlanetas />} />
 
-          <Route path="*" element={<Error/>} />
+            <Route path="/detalhes/:slug" element={<Detalhes />} />
 
-        </Routes>
+            <Route path="*" element={<Error />} />
 
-      </Router>
+          </Routes>
+
+        </Router>
+
+      </ThemeProvider>
 
 
 
