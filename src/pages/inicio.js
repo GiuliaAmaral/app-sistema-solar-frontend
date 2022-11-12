@@ -9,7 +9,7 @@ export default function Inicio() {
         <>
             <Mui.Container >
 
-                <Mui.Stack direction="column" justifyContent="center" alignItems="center" spacing={2} height='100vh'>
+                <Mui.Stack direction="column" justifyContent="center" alignItems="center" spacing={2} mt={2} height='100vh'>
 
                     <Mui.Typography color='white' variant="h1" fontSize="2rem" fontFamily='Nunito'>
                         Conheça o Sistema Solar! Utilize o
@@ -18,7 +18,7 @@ export default function Inicio() {
                         </Mui.Typography>
                     </Mui.Typography>
 
-                    <img className='efeito-flutuante' width="100%" src="astronauta.png" alt='astronauta' />
+                    <img className='efeito-flutuante' src="astronauta.png" alt='astronauta' />
 
                     <Link style={{ textDecoration: 'none' }} to='/planetas'>
                         <Mui.Button variant="contained" size='large'>Vamos lá!</Mui.Button>
